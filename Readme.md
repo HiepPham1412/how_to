@@ -10,3 +10,9 @@ ssh -N -L local-address:local-port:remote-address:remote-port remote-user@remote
 "-N": don't execute any commands after the "tunnel" is established
 
 "-L" a Local port forward to the remote machine (-R goes the other way).
+
+In case you want to log in AWS EC2 instance, you need to specify path to the pair ky file (.pem)
+
+```
+ssh -i path-to-.pem-file -N -L local-address:local-port:remote-address:remote-port remote-user@remote-host
+```
